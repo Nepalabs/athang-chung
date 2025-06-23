@@ -47,12 +47,6 @@ const Profile = () => {
     );
   }
 
-  const total = movies.length;
-  const completed = movies.filter((m) => m.watched === "Completed").length;
-  const watching = movies.filter((m) => m.watched === "Watching").length;
-  const plan = movies.filter((m) => m.watched === "Plan to Watch").length;
-  const dropped = movies.filter((m) => m.watched === "Dropped").length;
-
   return (
     <div>
       <Navbar />
@@ -81,24 +75,6 @@ const Profile = () => {
 
           <hr />
 
-          <h3>🎬 Movie Statistics</h3>
-          <ul>
-            <li>
-              <strong>Total Movies:</strong> {total}
-            </li>
-            <li>
-              <strong>Completed:</strong> {completed}
-            </li>
-            <li>
-              <strong>Watching:</strong> {watching}
-            </li>
-            <li>
-              <strong>Plan to Watch:</strong> {plan}
-            </li>
-            <li>
-              <strong>Dropped:</strong> {dropped}
-            </li>
-          </ul>
 
           <hr />
           <p className="note">

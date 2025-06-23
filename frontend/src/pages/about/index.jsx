@@ -1,3 +1,5 @@
+
+import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import Team from "./Team";
 
@@ -40,6 +42,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    <Footer/>
   </div>
    
   );

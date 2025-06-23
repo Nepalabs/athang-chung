@@ -5,6 +5,7 @@ import { useAuth } from "../context/AuthContext";
 import "./index.css";
 import Navbar from "../components/navbar/Navbar";
 import { Link } from "react-router-dom";
+import Footer from "../components/footer/Footer";
 
 const initialMovieData = {
   name: "",
@@ -110,7 +111,7 @@ const Home = () => {
   if (showIntro) {
     return (
       <div className="intro-screen">
-        <div className="intro-logo">WATCHBUDDY</div>
+        <div className="intro-logo">WatchBuddy</div>
       </div>
     );
   }
@@ -141,12 +142,17 @@ const Home = () => {
               Discover, organize, and rate your favorite movies and TV shows.
               Never forget what to watch next with WatchBuddy.
             </p>
-            <div className="team-link">
-              <p>Want to know who built this?</p>
-              <Link to="/team" className="meet-team-btn">
-                Meet the Team
-              </Link>
-            </div>
+         
+            <div className="team-link-section">
+          <h2>Created With Passion</h2>
+          <p>
+            WatchBuddy was built by movie lovers, for movie lovers. 
+            Meet the team behind this project.
+          </p>
+          <Link to="/team" className="meet-team-btn">
+            Meet the Team
+          </Link>
+        </div>
           </div>
 
           <div className="auth-features">
@@ -178,8 +184,41 @@ const Home = () => {
                 Rate your favorite movies and keep track of your preferences
               </p>
             </div>
+               <div className="hero-section">
+          <h1>Your Personal Movie Companion</h1>
+          <p className="hero-subtitle">
+            Organize, discover, and never forget what to watch next
+          </p>
+          <div className="cta-buttons">
+            <Link to="/register" className="primary-cta">
+              Get Started - It's Free
+            </Link>
+            <Link to="/login" className="secondary-cta">
+              Already have an account? Login
+            </Link>
+          </div>
+          
+        </div>
+             <div className="testimonials">
+          <h2>What Our Users Say</h2>
+          <div className="testimonial-cards">
+            <div className="testimonial">
+              <div className="quote">"WatchBuddy completely changed how I organize my movie nights!"</div>
+              <div className="author">- Pema</div>
+            </div>
+            <div className="testimonial">
+              <div className="quote">"Finally an app that helps me remember what I wanted to watch!"</div>
+              <div className="author">- Kinley</div>
+            </div>
+            <div className="testimonial">
+              <div className="quote">"The recommendation engine found me movies I never would have discovered."</div>
+              <div className="author">- Wangchuk</div>
+            </div>
           </div>
         </div>
+          </div>
+        </div>
+        <Footer/>
       </div>
     );
   }
@@ -379,6 +418,7 @@ const Home = () => {
           </div>
         </div>
       )}
+      <Footer/>
     </div>
   );
 };
